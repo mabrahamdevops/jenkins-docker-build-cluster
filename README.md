@@ -51,7 +51,7 @@ Intial deployment to AWS can be done from the AWS-CLI command line tool.
  
 Here we are using aws-cli version 1.1.185 to call "terraform apply" to build the jenkins-docker-build-cluster with the Terraform provider.aws version 2.63.0.  
 
-Here are the expected resources after terraform deploy completes.
+Here are the expected resources after terraform apply completes.
 
 1.  Launch Configuration createS EC2 instances, minimum of twol
 ![](images/ec2.png)
