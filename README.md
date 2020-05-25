@@ -53,11 +53,11 @@ Here we are using aws-cli version 1.1.185 to call "terraform apply" to build the
 
 Here are the expected resources after terraform deploy completes.
 
-1.  Launch Configuration will create EC2 instances, minimum of twol
+1.  Launch Configuration createS EC2 instances, minimum of twol
 ![](images/ec2.png)
 
 
-2. jenkinsdocker autoscaling group is created.
+2.  The jenkinsdocker autoscaling group is created.
 ![](images/asg.png)
 
 
