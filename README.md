@@ -47,8 +47,8 @@ resource "aws_autoscaling_group" "buiLd-server-asg" {
 
 Intial deployment to AWS can be done from the AWS-CLI command line tool.
 
-![Image of AWScli](https://github.com/mabrahamdevops/images/AWScli.png)
-
+![](images/AWScli.png)
+ 
 
 
 
