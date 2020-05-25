@@ -1,19 +1,20 @@
-# ---------------------------------------------------------------------------
+# ---------------------------------------------------------------------------------------------------------------------------------------
+#  Terraform file to create a autoscaling cluster in AWS to host Jenkins and Docker build machines.  See README.md for additional details
+#  regarding methodology.
 #
-#
-#
-#
-# ---------------------------------------------------------------------------
+#  (C) 2020 Mark Abraham, Brandon, FL
+#  Email: markabraham3232@gmail.com
+# ---------------------------------------------------------------------------------------------------------------------------------------
 
 terraform {
-    required_version = ">= 0.12, <0.13"
+    required_version = ">= 0.12, <0.13"                     # The code syntax  below is based on Terraform version .12.xxx 
 }
 # https://www.terraform.io/docs/providers/aws/index.html
 provider "aws" {
     region = "us-east-2"
     
     # Allow any 2.x version of the aws provider
-    version = "~> 2.0"
+    version = "~> 2.0"                                      # The aws resource syntax is based on version 2.xx if using 1.xxx make sure to use version 1.xx documentation
 }
 
 #Deploying Jenkins and Docker to a Linux vm in a Docker container with autoscaling
@@ -91,7 +92,7 @@ resource "aws_lb_listener_rule" "asg" {
     listener_arn    = aws_lb_listener.http.arn
     priority        = 100
 
-    # This following configuration sends listener requests that match any path to the BuiLd-server-ASG target group
+    # This configuration sends listener requests that match any path to the BuiLd-server-ASG target group
     condition {
         path_pattern {
             values  = ["*"]
@@ -126,6 +127,7 @@ health_check {
 }
 
 # https://www.terraform.io/docs/providers/aws/r/security_group.html
+# For lines 131 to 158 we are using default values. For production code more robust security groups and vpcs should be applied.
 resource "aws_security_group" "alb" {
     name =  var.alb_security_group_name
 
