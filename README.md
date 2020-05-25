@@ -22,11 +22,11 @@ The concept of using Jenkins and Docker inside a container is useful for a singl
 option for entire teams or departments, it must be scalable to eliminate performance issues.  While the premise to keep this cloud, environmentent, and operating system agnostic, the project has been configured to deploy to AWS as autoscale group.
 
 The project uses several AWS tools including:
-    1. AWS Launch Configuration
-    2. AWS Autoscaling
-    3. AWS Load Balancing
-    4. Custom Security Groups
-    5. AWS VPC
+1. AWS Launch Configuration
+2. AWS Autoscaling
+3. AWS Load Balancing
+4. Custom Security Groups
+5. AWS VPC
 
 The basic premise is the ASG is deployed with a minimum of two EC2 instances and can scale to a maximum of ten instances as demand increases. Please review jenkins_build_cluster.tf for more in depth details pertaining to the code used.
 
@@ -42,6 +42,14 @@ resource "aws_autoscaling_group" "buiLd-server-asg" {
     min_size = 2
     max_size = 10
 ```
+
+## Deployment
+
+Intial deployment to AWS can be done from the AWS-CLI command line tool.
+
+![Image of AWScli](https://https://github.com/mabrahamdevops/images.git)
+
+
 
 
 
