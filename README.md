@@ -19,7 +19,7 @@ The concept is to have an automated package that can be deployed that standardiz
 ## Scalability
 
 The concept of using Jenkins and Docker inside a container is useful for a single developer or scrum team.  In order for it to be a viable
-option for entire teams or departments, it must be scalable to eliminate performance issues.  While the premise to keep this cloud, environmentent, and operating system agnostic, the project has been configured to deploy to AWS as autoscale group.
+option for entire teams or departments, it must be scalable to eliminate performance issues.  While the premise to keep this cloud, environment, and operating system agnostic, the project has been configured to deploy to AWS as an autoscale group.
 
 The project uses several AWS tools including:
 1. AWS Launch Configuration
