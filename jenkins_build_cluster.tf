@@ -6,7 +6,7 @@
 #  Email: markabraham3232@gmail.com
 # ---------------------------------------------------------------------------------------------------------------------------------------
 
-terraform {
+# terraform {
     required_version = ">= 0.12, <0.13"                     # The code syntax  below is based on Terraform version .12.xxx 
 }
 # https://www.terraform.io/docs/providers/aws/index.html
